@@ -14,38 +14,9 @@
 \maketitle
 
 
-\section*{Motivation and Key Research Questions}
 
-Why Humans and Autonomy?
-Humans and Autonomy must be collaborative
-“…the true value of unmanned systems is not to provide a direct human replacement, but rather to extend and complement human capability” (DSB Task Force Report, 2012)
+\input{motivation}
 
-Autonomy must reflect human ethics and decision making
-(autonomous systems must) “…allow commanders and operators to exercise appropriate levels of human judgment…” (A. B. Carter, DoD Directive 3000.09, November 21, 2012)
-
-Ensure that autonomy doesn’t compromise our humanity
-“To comply with international humanitarian law, fully autonomous weapons would need human qualities that they inherently lack.” (Human Rights Watch, “Losing Humanity”, November 19, 2012)
-
-
-\subsection*{Definition of Autonomy}
-(DoD Autonomy Priority Steering Council, Nov 2012)
-Definition of Autonomy: “capability and freedom to self-direct to achieve mission objectives”
-
-“Military Power in the 21st Century will be defined by our ability to adapt – this is THE hallmark of autonomy”
-
-Key Technical Challenge Areas/Gaps
-Human-Autonomy Interaction and Collaboration
-Scalability
-Machine Intelligence
-Verification and Validation
-
-\subsection*{Key Research Questions:}
-
-How do we model, verify, and utilize humans as collaborative decision makers and actors in correct-by-construct autonomous systems?
-
-How do we create multi-scale, model-based autonomy (controllers, communication, and computation) that scales to the battlespace?
-
-How do we co-design complex mission systems to optimally and acceptably incorporate human and autonomy decision-makers and actors?
 
 
 
@@ -57,104 +28,7 @@ Trust
 Security
 User interfaces
 
-
-\section*{Background}
-
-\subsection*{Verification \& Validation (software v. autonomy)}
-Verification Def’n: Requirements evaluation during development
-
-Current software engineering tools for verification
-Model checking (Alloy, TLA+, VCC)
-Successful extensions to Internet scale (BGP, PAXOS)
-Autonomy has borrowed/expanded these concepts for the verification of autonomy
-Model checking (SPIN, NuSVM)
-Probabilistic model checkers (PRISM)
-
-State of the art tools are being used to verify software and autonomy, even probabilistically 
-
-Validation Def’n: Requirements evaluation after integration
-
-Current validation is empirical (test and eval)
-Errors are a clear function of complexity*: 
-- table of software errors
-
-0.1-1.0 errors/kLOC crit
-F35A:
-Expect ~1800 code errors
-Over half cost is software
-
-Current validation methods are not sustainable as systems increase in complexity
-
-
-
-
-
-\subsection*{Correct by construction controllers}
-
-- summary here of Hadas’ stuff, others
-- flow chart and example
-
-
-
-Can automatically develop  controllers (from models, high level specifications) that are probabilistically correct
-
-
-
-
-\subsection*{Probabilistic modeling and humans}
-
-Many types of models
-Motor skills
-     .
-     .
-     .
-Bayesian Networks
-Gaussian Processes
-     .
-     .
-     .
-ACT-R
-
-Increasing in capabiolities complexity
-
-Give GP example from Ergonomics
-
-
-There is a growing maturity in probabilistic models of human decision making
-
-
-\subsection*{Collaborative autonomy}
-
-Collaboration over computation, communication, navigation, and sensing
-
-Multi-vehicle collaboration 
-Decentralized task selection / allocation (Market protocols - Wellman et al, Optimization - How et al) 
-Cooperative path planning (Tsourdos et al)
-Scalability through swarm-based techniques (e.g., consensus, potential field)  (McLain et al)
-
-Collaborative human-autonomy systems
-Human intent prediction (e.g. partially-observable Markov Decision Process) (Karami et al)
-Adaptive tasking (Parasuram et al)
-Use metrics (e.g., confidence) to decide when to ask for help (Fong et al) 
-Apply perspective-taking to project companion awareness state (Trafton et al)
-
-
-Capable strategies for collaborative autonomy systems exist and can be 
-leveraged for co-design of human-autonomy systems
-
-
-\subsection*{Model-based system engineering}
-Transition from functional decomposition..
-Does not scale well
-Difficult to verify
-
-
-…to Model-based System Engineering 
-State-based models of each actor are generated.
-Each model is re-used over all phases of system engineering
-Improves scalability and consistency
-State analysis offers a formal method to verify behaviors
-Successfully applied to single-actor systems (e.g., spacecraft missions)
+\input{background}
 
 
 
@@ -178,27 +52,9 @@ Successfully applied to single-actor systems (e.g., spacecraft missions)
 %Manned vehicles (onboard sensors/ computers/comms)
 %Remote analysts/data centers
 
+\input{research}
 
-\section*{Key Research Directions}
-
-\subsection*{Probabilistic Models of Human Capabilities in Correct by Construction Frameworks}
-
-\subsection*{Rapid Validation}
-
-\subsection*{Multi-scale architectures for human autonomy}
-
-\subsection*{Human-Automation System Co-Design}
-
-\section*{Implications: Potential Impact}
-
-- summary here
-- what will happen if this is successful?
-- some key questions we did not address, but are important:
-Our initial tack was to make inroads into acceptance.  It was hard.  Why?
-How far can modeling of human capabilities go? 
-Can we formalize trust?
-Can acceptance be accomplished without full system validation?
-How will real and perceived risk change?
+\input{implications}
 
 
 
