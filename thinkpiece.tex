@@ -11,11 +11,10 @@
 \author{Ella Atkins, Randal Burns, and Mark Campbell}
 
 
-\begin{documents}
+\maketitle
 
-\newpage
 
-Motivation and Key Research Questions
+\section*{Motivation and Key Research Questions}
 
 Why Humans and Autonomy?
 Humans and Autonomy must be collaborative
@@ -28,11 +27,192 @@ Ensure that autonomy doesn’t compromise our humanity
 “To comply with international humanitarian law, fully autonomous weapons would need human qualities that they inherently lack.” (Human Rights Watch, “Losing Humanity”, November 19, 2012)
 
 
-Definition of Autonomy
+\subsection*{Definition of Autonomy}
 (DoD Autonomy Priority Steering Council, Nov 2012)
 Definition of Autonomy: “capability and freedom to self-direct to achieve mission objectives”
 
 “Military Power in the 21st Century will be defined by our ability to adapt – this is THE hallmark of autonomy”
+
+Key Technical Challenge Areas/Gaps
+Human-Autonomy Interaction and Collaboration
+Scalability
+Machine Intelligence
+Verification and Validation
+
+\subsection*{Key Research Questions:}
+
+How do we model, verify, and utilize humans as collaborative decision makers and actors in correct-by-construct autonomous systems?
+
+How do we create multi-scale, model-based autonomy (controllers, communication, and computation) that scales to the battlespace?
+
+How do we co-design complex mission systems to optimally and acceptably incorporate human and autonomy decision-makers and actors?
+
+
+
+
+Restrictions in scope - do we say this?? We will not address:
+Acquisition process
+Policy, law, treaty
+Trust
+Security
+User interfaces
+
+
+\section*{Background}
+
+\subsection*{Verification \& Validation (software v. autonomy)}
+Verification Def’n: Requirements evaluation during development
+
+Current software engineering tools for verification
+Model checking (Alloy, TLA+, VCC)
+Successful extensions to Internet scale (BGP, PAXOS)
+Autonomy has borrowed/expanded these concepts for the verification of autonomy
+Model checking (SPIN, NuSVM)
+Probabilistic model checkers (PRISM)
+
+State of the art tools are being used to verify software and autonomy, even probabilistically 
+
+Validation Def’n: Requirements evaluation after integration
+
+Current validation is empirical (test and eval)
+Errors are a clear function of complexity*: 
+- table of software errors
+
+0.1-1.0 errors/kLOC crit
+F35A:
+Expect ~1800 code errors
+Over half cost is software
+
+Current validation methods are not sustainable as systems increase in complexity
+
+
+
+
+
+\subsection*{Correct by construction controllers}
+
+- summary here of Hadas’ stuff, others
+- flow chart and example
+
+
+
+Can automatically develop  controllers (from models, high level specifications) that are probabilistically correct
+
+
+
+
+\subsection*{Probabilistic modeling and humans}
+
+Many types of models
+Motor skills
+     .
+     .
+     .
+Bayesian Networks
+Gaussian Processes
+     .
+     .
+     .
+ACT-R
+
+Increasing in capabiolities complexity
+
+Give GP example from Ergonomics
+
+
+There is a growing maturity in probabilistic models of human decision making
+
+
+\subsection*{Collaborative autonomy}
+
+Collaboration over computation, communication, navigation, and sensing
+
+Multi-vehicle collaboration 
+Decentralized task selection / allocation (Market protocols - Wellman et al, Optimization - How et al) 
+Cooperative path planning (Tsourdos et al)
+Scalability through swarm-based techniques (e.g., consensus, potential field)  (McLain et al)
+
+Collaborative human-autonomy systems
+Human intent prediction (e.g. partially-observable Markov Decision Process) (Karami et al)
+Adaptive tasking (Parasuram et al)
+Use metrics (e.g., confidence) to decide when to ask for help (Fong et al) 
+Apply perspective-taking to project companion awareness state (Trafton et al)
+
+
+Capable strategies for collaborative autonomy systems exist and can be 
+leveraged for co-design of human-autonomy systems
+
+
+\subsection*{Model-based system engineering}
+Transition from functional decomposition..
+Does not scale well
+Difficult to verify
+
+
+…to Model-based System Engineering 
+State-based models of each actor are generated.
+Each model is re-used over all phases of system engineering
+Improves scalability and consistency
+State analysis offers a formal method to verify behaviors
+Successfully applied to single-actor systems (e.g., spacecraft missions)
+
+
+
+%Reference Mission - do we want this?
+%
+%Mission
+%Identify thermal signatures/people of interest
+%Detect and avoid or disable IEDs
+%Pervasive human and autonomy elements
+%High-altitude UAV 
+%Large-area monitoring, long-range communications
+%Visual/hyperspectral imagery
+%Remote operators and analysts
+%Group of small UAVs
+%Thermal field imaging and video
+%Local operators and analysts
+%Ground robots:  IED detect and disarm
+%Humans deploy and operate locally
+%Intelligence collection and dissemination
+%Humans:  direct observation; hand-carried devices (e.g., cell phones)
+%Manned vehicles (onboard sensors/ computers/comms)
+%Remote analysts/data centers
+
+
+\section*{Key Research Directions}
+
+\subsection*{Probabilistic Models of Human Capabilities in Correct by Construction Frameworks}
+
+\subsection*{Rapid Validation}
+
+\subsection*{Multi-scale architectures for human autonomy}
+
+\subsection*{Human-Automation System Co-Design}
+
+\section*{Implications: Potential Impact}
+
+- summary here
+- what will happen if this is successful?
+- some key questions we did not address, but are important:
+Our initial tack was to make inroads into acceptance.  It was hard.  Why?
+How far can modeling of human capabilities go? 
+Can we formalize trust?
+Can acceptance be accomplished without full system validation?
+How will real and perceived risk change?
+
+
+
+\section*{Acknowledgements}
+IDA
+Rebecca Grier, Frank Moses, Shelley Cazares
+DoD Visits
+LANL, NRL, Army/Marine facilities \& people, DARPA
+Additional conversations
+Palantir
+Raja Parasuraman (GWU), Scott Galster (AFLR/HE), Hadas Kress-Gazit (Cornell)
+Data Science at Scale Team (LANL)
+DSSG Colleagues, Mentors, Sponsor (DARPA), and, of course, Katie and Bob
+
 
 
 
