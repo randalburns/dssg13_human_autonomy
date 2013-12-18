@@ -1,0 +1,99 @@
+
+\section*{Background}
+
+\subsection*{Verification \& Validation (software v. autonomy)}
+Verification Def’n: Requirements evaluation during development
+
+Current software engineering tools for verification
+Model checking (Alloy, TLA+, VCC)
+Successful extensions to Internet scale (BGP, PAXOS)
+Autonomy has borrowed/expanded these concepts for the verification of autonomy
+Model checking (SPIN, NuSVM)
+Probabilistic model checkers (PRISM)
+
+State of the art tools are being used to verify software and autonomy, even probabilistically 
+
+Validation Def’n: Requirements evaluation after integration
+
+Current validation is empirical (test and eval)
+Errors are a clear function of complexity*: 
+- table of software errors
+
+0.1-1.0 errors/kLOC crit
+F35A:
+Expect ~1800 code errors
+Over half cost is software
+
+Current validation methods are not sustainable as systems increase in complexity
+
+
+
+
+
+\subsection*{Correct by construction controllers}
+
+- summary here of Hadas’ stuff, others
+- flow chart and example
+
+
+
+Can automatically develop  controllers (from models, high level specifications) that are probabilistically correct
+
+
+
+
+\subsection*{Probabilistic modeling and humans}
+
+Many types of models
+Motor skills
+     .
+     .
+     .
+Bayesian Networks
+Gaussian Processes
+     .
+     .
+     .
+ACT-R
+
+Increasing in capabiolities complexity
+
+Give GP example from Ergonomics
+
+
+There is a growing maturity in probabilistic models of human decision making
+
+
+\subsection*{Collaborative autonomy}
+
+Collaboration over computation, communication, navigation, and sensing
+
+Multi-vehicle collaboration 
+Decentralized task selection / allocation (Market protocols - Wellman et al, Optimization - How et al) 
+Cooperative path planning (Tsourdos et al)
+Scalability through swarm-based techniques (e.g., consensus, potential field)  (McLain et al)
+
+Collaborative human-autonomy systems
+Human intent prediction (e.g. partially-observable Markov Decision Process) (Karami et al)
+Adaptive tasking (Parasuram et al)
+Use metrics (e.g., confidence) to decide when to ask for help (Fong et al) 
+Apply perspective-taking to project companion awareness state (Trafton et al)
+
+
+Capable strategies for collaborative autonomy systems exist and can be 
+leveraged for co-design of human-autonomy systems
+
+
+\subsection*{Model-based system engineering}
+Transition from functional decomposition..
+Does not scale well
+Difficult to verify
+
+
+…to Model-based System Engineering 
+State-based models of each actor are generated.
+Each model is re-used over all phases of system engineering
+Improves scalability and consistency
+State analysis offers a formal method to verify behaviors
+Successfully applied to single-actor systems (e.g., spacecraft missions)
+
