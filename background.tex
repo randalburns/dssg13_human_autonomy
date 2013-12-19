@@ -1,19 +1,37 @@
 
 \section*{Background}
 
+The conclusions and implications of this think piece are built upon five key technical areas: Verification \& Validation, which is common in computer software and autonomy; correct by construction controllers which are generated with guarantees; probabilistic modeling of human decision making; collaborative autonomy, and model based system engineering. Each of these are briefly described here, with a few example references. 
+
 \subsection*{Verification \& Validation (software v. autonomy)}
-Verification Def’n: Requirements evaluation during development
 
-Current software engineering tools for verification
-Model checking (Alloy, TLA+, VCC)
-Successful extensions to Internet scale (BGP, PAXOS)
-Autonomy has borrowed/expanded these concepts for the verification of autonomy
-Model checking (SPIN, NuSVM)
-Probabilistic model checkers (PRISM)
+A recent study by the Office of the US Air Force Chief Scientist~\cite{tech-horizons2011} cited Verification and Validation (V\&V) is a key limitation in the ability to achieve the high impact gains that can be realized from autonomy. 
+\begin{center}
+\parbox[c]{6in}{
+{\em ``Increased use of autonomy$\ldots$  will depend on development of entirely new methods for enabling `trust in autonomy' through verification and validation (V\&V) of the near-infinite state systems that result from high levels of adaptability and autonomy.''} \\
+\hspace*{20pt} A Vision for Air Force Science and Technology 2010-30, USAF Chief Scientist, 2011.
+}
+\end{center}
 
-State of the art tools are being used to verify software and autonomy, even probabilistically 
+It is important to first understand the definitions of Verification and Validation:
+\begin{center}
+\parbox[c]{6in}{
+{\em Verification: Requirements evaluation {\em during} development} \\[0.1 in]
+{\em Validation: Requirements evaluation {\em after} integration} %\\
+%\hspace*{20pt} A Vision for Air Force Science and Technology 2010-30, USAF Chief Scientist, 2011.
+}
+\end{center}
+Thus, the process of verification is to incrementally and systematically evaluate whether a system or subsystem is meeting requirements during the design process. Validation, on the other hand, evaluates whether the completed system meets the end customer requirements in a practical setting. If done well, Verification can speed up of the Validation process because portions of the underlying system have already been verified. 
 
-Validation Def’n: Requirements evaluation after integration
+The process of V\&V has been known for a long time, and is a formal part of nearly any systems engineering process~\cite{syseng-book}. The importance  of systematic processes has increased as the complexity/safety/security of the system has increased, such as in cars, airplanes, and spacecraft. V\&V for these systems has typically taken the form of empirical testing because it is closer to the end operational state, and people typically accept empirical testing easier than other options such as simulations. 
+
+V\&V in software has also increased in importance over the years with the growth of programs and applications. Software companies... ({\bf Randal should write this, maybe mention beta testing, etc.}). 
+
+With all applications, the time required for the processes for V\&V increases increases, creating pressures on safety/security/costs, etc. As such, recent research in the software engineering community has focused on developing automated, and formal, verification tools. (From the talk... Randal write...
+- Model checking (Alloy, TLA+, VCC)
+- Successful extensions to Internet scale (BGP, PAXOS))
+
+
 
 Current validation is empirical (test and eval)
 Errors are a clear function of complexity*: 
@@ -28,6 +46,30 @@ Current validation methods are not sustainable as systems increase in complexity
 
 
 
+PRISM is one that is often used: http://www.prismmodelchecker.org/
+
+
+Autonomy has borrowed/expanded these concepts for the verification of autonomy
+Model checking (SPIN, NuSVM)
+Probabilistic model checkers (PRISM)
+
+
+
+
+
+State of the art tools are being used to verify software and autonomy, even probabilistically 
+
+
+\begin{figure}[h] 
+\centering
+   \includegraphics[width=3.0in]{coll_prob_inst.pdf} 
+  % \label{fig:collision}
+   \includegraphics[width=2.5in]{taxi-driver.pdf} 
+   \caption{collision probability taxi driver example}
+   \label{fig:taxi-taxi}
+\end{figure}
+
+
 
 
 \subsection*{Correct by construction controllers}
@@ -39,7 +81,12 @@ Current validation methods are not sustainable as systems increase in complexity
 
 Can automatically develop  controllers (from models, high level specifications) that are probabilistically correct
 
-
+\begin{figure}[h] 
+\centering
+   \includegraphics[width=2.5in]{correct-by-construction.pdf} 
+   \caption{correct by construction example}
+   \label{fig:correct-by-construction}
+\end{figure}
 
 
 \subsection*{Probabilistic modeling and humans}
@@ -60,6 +107,13 @@ Increasing in capabiolities complexity
 
 Give GP example from Ergonomics
 
+
+\begin{figure}[h] 
+   \centering
+   \includegraphics[width=3.5in]{GP-fig.pdf} 
+   \caption{probabilistic modeling of human decision making example}
+   \label{fig:prob-humans}
+\end{figure}
 
 There is a growing maturity in probabilistic models of human decision making
 
