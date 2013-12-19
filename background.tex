@@ -25,39 +25,39 @@ Thus, the process of verification is to incrementally and systematically evaluat
 
 The process of V\&V has been known for a long time, and is a formal part of nearly any systems engineering process~\cite{syseng-book}. The importance  of systematic processes has increased as the complexity/safety/security of the system has increased, such as in cars, airplanes, and spacecraft. V\&V for these systems has typically taken the form of empirical testing because it is closer to the end operational state, and people typically accept empirical testing easier than other options such as simulations. 
 
+Most of these complex systems have grown in complexity more because of software growth than other components. Autonomous systems are particular challenging, as the physical system has not changed as much as the internal `intelligence' of the software. With the software growth, however, comes the typical challenges in verification of the system (now, a physical+software system). Dr.\ Werner Dahm, former Chief Scientist of the Air Force, has given several talks~\cite{gnc-talk} on the Air Force study in Ref.~citen{}, and cited the growth and errors in software. A small summary is given below:
+
+\begin{table}
+\begin{center}
+\begin{tabular}{l|c}
+System &  Lines of Code (loc)\\ \hline
+F-4A & 1,000\\
+F-15A &  50,000\\
+F-16C &  300,000\\
+F-22 &  2,500,000\\
+F-35 &  18,000,000
+\end{tabular}
+\caption{Critical lines of code for aircraft; $\sim$4-6 errors per 1000 LOC, $\sim$0.1-1.0 errors per 1000 critical LOC}
+   \label{table:loc}
+\end{center}
+\end{table}
+
+Current V\&V methods are not sustainable as systems increase in complexity, given this growth. Dr.\ Dahm argues is that current systems with autonomous elements are tested to exhaustion of the budget, rather than to a formal level of V\&V. 
+
 V\&V in software has also increased in importance over the years with the growth of programs and applications. Software companies... ({\bf Randal should write this, maybe mention beta testing, etc.}). 
 
 With all applications, the time required for the processes for V\&V increases increases, creating pressures on safety/security/costs, etc. As such, recent research in the software engineering community has focused on developing automated, and formal, verification tools. (From the talk... Randal write...
 - Model checking (Alloy, TLA+, VCC)
 - Successful extensions to Internet scale (BGP, PAXOS))
 
+The robotics community has borrowed/expanded these concepts for the verification of autonomy. In particular, research has been conducted in developing approaches for formal verification of software for autonomous systems. Spin~\cite{spin} and NuSVM~\cite{nusvm} are two examples of model checkers, which are designed to verify software which is typically generated from higher level specifications. The tools typically check logical consistency of a specification and reports on deadlocks, race conditions, incompleteness, and  assumptions. 
 
+Most recently, the community has developed `probabilistic model checkers' which are designed to verify software to a particular level of probability. These tools typically verify a system through symbolic data structures and algorithms as well as exhaustive search. Importantly, atate of the art tools are being used to verify software and autonomy, even probabilistically.
 
-Current validation is empirical (test and eval)
-Errors are a clear function of complexity*: 
-- table of software errors
+\subsection*{Correct by construction controllers}
 
-0.1-1.0 errors/kLOC crit
-F35A:
-Expect ~1800 code errors
-Over half cost is software
-
-Current validation methods are not sustainable as systems increase in complexity
-
-
-
-PRISM is one that is often used: http://www.prismmodelchecker.org/
-
-
-Autonomy has borrowed/expanded these concepts for the verification of autonomy
-Model checking (SPIN, NuSVM)
-Probabilistic model checkers (PRISM)
-
-
-
-
-
-State of the art tools are being used to verify software and autonomy, even probabilistically 
+- summary here of Hadas’ stuff, others
+- flow chart and example
 
 
 \begin{figure}[h] 
@@ -69,13 +69,6 @@ State of the art tools are being used to verify software and autonomy, even prob
    \label{fig:taxi-taxi}
 \end{figure}
 
-
-
-
-\subsection*{Correct by construction controllers}
-
-- summary here of Hadas’ stuff, others
-- flow chart and example
 
 
 
