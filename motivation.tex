@@ -10,16 +10,16 @@ just managing those systems, but seamlessly integrating human capabilities, huma
 }
 \end{center}
 The DSB asserts that the benefits of Autonomy lie in unlimited persistence, reducing risk to humans, and reducing cognitive load.
-Autonomy should in no way eliminate or reduces human capabilities.  This lead to shift in thinking in which autonomy is a capability to
+Autonomy should in no way eliminate or reduce human capabilities.  This shifts thinking so that autonomy becomes a capability to
 be integrated into a complex human-machine system,  rather than a functional replacement for a human.
 
-With this conceptual shift, the question arises: How can autonomy integrate into human-machine systems so that they maximize the 
+With this conceptual shift, how can autonomy integrate into human-machine systems so that they maximize the 
 performance the system as a whole?  Insight into system performance requires measures and models of human performance 
 both standalone and in the presence of autonomy and the capability to extend performance to systems that are multi-scale
 networks of humans and autonomy.
 
 Beyond performance, it is essential to have
-guarantees that autonomous systems operate correctly within bounds set by human oversight, not system specifications.
+guarantees that autonomous systems operate correctly within bounds set by human oversight, not specifications or requirements.
 \begin{center}
 \parbox[c]{6in}{
 {\em ``Autonomous and semi-autonomous weapon systems shall be designed to allow 
@@ -41,24 +41,57 @@ autonomous capabilities.
 %%}
 %\end{center}
 
-\subsection*{Definition of Autonomy}
-(DoD Autonomy Priority Steering Council, Nov 2012)
-Definition of Autonomy: “capability and freedom to self-direct to achieve mission objectives”
+Because autonomy is evolving toward human collaboration, capability enhancement, and complex systems, 
+new definitions of autonomy are needed to guide innovation and set goals.  The DoD Priority Steering
+council recently defined autonomy as the ``capability and freedom to self-direct to achieve mission objectives''.
+They also put forth that:
+\begin{center}
+\parbox[c]{6in}{
+{\em ``Military Power in the 21st Century will be defined by our ability to adapt---this is THE hallmark of autonomy''
+} \\
+ \hspace*{20pt} DoD Priority Steering Council, Nov. 2012
+}
+\end{center}
+The role of science and technology development in autonomy is to meet this definition of autonomy
+while integrating humans, resolving conflicts between self-direction and correctness and 
+ensuring that adaptation reflects human decisions.
 
-“Military Power in the 21st Century will be defined by our ability to adapt – this is THE hallmark of autonomy”
+% RB footnote?
+The authors note that this thinkpiece focuses on how science and technology can contribute to achieving autonomy goals related to human collaboration in autonomous systems.
+As such, it does not focus on acquisition, security, policy, and law.
 
-Key Technical Challenge Areas/Gaps
-Human-Autonomy Interaction and Collaboration
-Scalability
-Machine Intelligence
-Verification and Validation
+\subsection*{Science and Technology Research Questions:}
 
-\subsection*{Key Research Questions:}
+%Key Technical Challenge Areas/Gaps
+%Human-Autonomy Interaction and Collaboration
+%Scalability
+%Machine Intelligence
+%Verification and Validation
 
-How do we model, verify, and utilize humans as collaborative decision makers and actors in correct-by-construct autonomous systems?
+\noindent {\em How do we model, verify, and utilize humans as collaborative decision makers and actors in correct-by-construct autonomous systems?}
 
-How do we create multi-scale, model-based autonomy (controllers, communication, and computation) that scales to the battlespace?
+\rb{Mark to write para for this one.}
 
-How do we co-design complex mission systems to optimally and acceptably incorporate human and autonomy decision-makers and actors?
+\begin{itemize}
+\item {\em How do we create multi-scale, model-based autonomy (controllers, communication, and computation) that scale to the battlespace?}
+\end{itemize}
+
+Emergent autonomous systems cannot be thought of simply as controllers that automate functions.  Rather, they are networks of humans and machines that
+perform heterogeneous complex tasks, such as data integration, navigation, target detection, and distributed sensing.  The ``controllers'' for 
+autonomous capabilities must include computation and communication, making the human-machine network a distributed computing system with a 
+network protocol.  This must include human computation for tasks in which humans exceed machines, such as language translation and 
+object classification in images.  It must also include protocols for humans to communicate with autonomy. 
+
+For complex, human-machine systems, model-based autonomy must be multi-scale, i.e.~define properties and invariants at multiple spatial and temporal scale
+and integrate or link the scales into the battlespace view.  Autonomy must be decomposed into multiple models.  First, 
+the state space of a human-machine network is so large as to be unsolvable in practice.  
+Also, models must be concise and represent related concepts to produce meaningful correctness guarantees and result in controllers.
+Autonomy will consist of a hierarchical network of models that are solved in detail individually and summarized to be integrated
+into higher-level models.
+
+\noindent {\em How do we co-design complex mission systems to optimally and acceptably incorporate human and autonomy decision-makers and actors?}
+
+\rb{Ella to write para for this one.}
+
 
 
