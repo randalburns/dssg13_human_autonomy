@@ -42,13 +42,17 @@ F-35 &  18,000,000
 \end{center}
 \end{table}
 
-Current V\&V methods are not sustainable as systems increase in complexity, given this growth. Dr.\ Dahm argues is that current systems with autonomous elements are tested to exhaustion of the budget, rather than to a formal level of V\&V. 
+Current V\&V methods are not sustainable as systems increase in complexity, given this growth. Dr.\ Dahm argues that current systems with autonomous elements are tested to exhaustion of the budget, rather than to a formal level of V\&V. 
 
-V\&V in software has also increased in importance over the years with the growth of programs and applications. Software companies... \rb{TODO should write this, maybe mention beta testing, etc.}). 
+V\&V in software has also increased in importance over the years with the growth of programs and applications.  Risk management for large software systems has
+lead to the ``spiral model'' of development \cite{Boehm} that builds out systems based on successive cycles each that incorporate V\&V and links V\&V to 
+design and the evaluation of risk.  The process commonly employs multiple groups for V\&V that are independent from developers, including a test team that are 
+part of the software development process and users and customers that participate in user acceptance {\em beta} testing.  
 
-With all applications, the time required for the processes for V\&V increases increases, creating pressures on safety/security/costs, etc. As such, recent research in the software engineering community has focused on developing automated, and formal, verification tools. (From the talk... Randal write...
-- Model checking (Alloy, TLA+, VCC)
-- Successful extensions to Internet scale (BGP, PAXOS))
+With all applications, the time required for the processes for V\&V increases increases, creating pressures on safety/security/costs, etc. As such, recent research in the software engineering community has focused on developing automated, and formal, verification tools. 
+  A major goal is to derived automatic verification of a system based on a formal specification of the system and a model checking, e.g. using temporal logic of actions \cite{TLA+}.  V\&V tools have matured so that they can provide formal proofs for large concurrent systems; the Alloy Analyzer has been used to correct the Chord peer-to-peer protocol \cite{alloychord} and verify the Internet's Border Gateway Protocol \cite{alloybgp}.
+Other advances adds V\&V capabilities to existing languages and development tools, such as the verifiable C compiler \cite{vcc}.  
+
 
 The robotics community has borrowed/expanded these concepts for the verification of autonomy. In particular, research has been conducted in developing approaches for formal verification of software for autonomous systems. Spin~\cite{spin} and NuSVM~\cite{nusvm} are two examples of model checkers, which are designed to verify software which is typically generated from higher level specifications. The tools typically check logical consistency of a specification and reports on deadlocks, race conditions, incompleteness, and  assumptions. 
 
