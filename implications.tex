@@ -1,16 +1,81 @@
 
 \section*{Implications: Potential Impact}
 
-\mc{To draft quickly.} \\
+%From slides:
+%
+%New complex missions mandate new human-autonomy collaboration
+%
+%Technical advancements in our three topics will:
+%Further the DSB goal of seamless, natural, and efficient collaboration of humans and autonomy
+%Robustly deploy human-autonomy at the mission scale (not the subsystem scale)
+%Model and design human and autonomy elements into an optimized collaborative system
+%
+%From slide notes:
+%
+%Goal:  Pursue fundamental research that contributes to bridging the human-autonomy gap
+%Furthers the DSB goal of ?seamless, natural, and efficient collaboration of humans and autonomy.?
+%??
+%Multi-scale:  Robustly deploy human-autonomy at the mission scale (not the subsystem scale)
+%Co-Design:  Model and design human and autonomy elements into an optimized collaborative system
+%
+%Want to make human elements effective?
+%Include restatement of DSB human-autonomy goals.
+%Human-autonomy collaboration (not interaction).
+%Seamless, natural, and efficient collaboration of humans and autonomy.
+
+
+%Concrete gaps from steering committee
+%Specific research directions to address human-autonomy systems
+%
+%This is where we stay away from our Nos
+%  acquistition
+%  policy law treaty
+% trust and deployment
+%  security
+
+%From last discussion slide, see also Galen's notes:
+%
+%Our initial tack was to make inroads into acceptance.  It was hard.  Why?
+%How far can modeling of human capabilities go? 
+%Can we formalize trust?
+%Can acceptance be accomplished without full system validation?
+%How will real and perceived risk change?
+
+%Galen's notes:
+%
+%?	Q. Are humans on an equal footing to material constructs? In a model. A. Model a human as an autonomous component. Model the human capability and action. Q2. Then you assume that your models are accurate? A2. Yes, this is a challenge we need to do.%?	Q. Is it probabilistically correct for each object or all the objects together?%?	Q. Do google cars use this? %?	Q. Do you have an idea of what point of errors in the code would be unsustainable? What is the break point. F35C is 25M lines of code. A. The tightness of integration impacts the vulnerability. More modularity in the codes; and in verification and validation of it.%?	Q. Is trust just an issue of risk? A. No it is more complicated than that.%?	Q. Given that integration challenges are formidable, what is the role of formal methods in validating the software? A. Modular approach. Q2. About trust? A2. You can formalize correctness, but then how does this translate to trust? Formalisms are powerful at scale. If we could model trust, could integrate it into the formalism. %?	Q. Now software comes from many places in the world. Did you consider the issues with this problem? What if there is a rouge partner with software that verifies correctly, i.e. appears to be correct, but in fact has bad intent? A. Address in system engineering ? as a part of the system that doesn?t work as it should  - would be a way to begin to address. Change the model once you observe its behavior. %?	Q. You will have a specification, some bounds on the behavior. What happens outside these bounds? What happens when the situation is outside the bounds? A. This is not well addressed with software verification. Includes secure software verification which is much more difficult, not so scalable. A current challenge. What happens when your human gets out of the human model state space? You need to have a mediation, a correction mechanism. This is fundamentally how we do verification now, but done empirically. Could use models to speed the process, but will still need a combined effort. %?	Q. Psychology of human beings. How do we model that? Do you smarten your inanimate things, or dumb down the humans? A. Would like to not ask humans to dumb down, and allow inanimate things to support. Q2. But your model of the human is incomplete and imperfect. A2. Yes, bounds on interaction requirements for example.%?	Comment: Robotics challenge will happen in coming year. Q. Was the DARPA Urban Challenge formative? Did it change your view on this? A. No one was using verification. Test and evaluation was critical to success. Trying to bridge the gap between the communities. %?	Q. Will the learning of the human be included? E.g. man or woman in combat for 6 months will do a lot better. Don?t want to dumb down the human. A. Modelers argue that if you have the data, you can try to model it. Q2. But you can?t tell how thing will change. A2. Pilot analogy. Can?t anticipate how they will deal with emergency situation. Will they panic? Will they be cool? How do they bring their training to bear? Autonomy may be able to help out here. 
+
+This think piece recommends the pursuit of fundamental research that contributes to bridging the human-autonomy gap through a combination of probabilistic modeling of human capabilities, formal methods in verification, multi-scale approaches, and human-automation co-design. We envision that our research will impact many, if not most, autonomous systems that inherently require interaction between humans and autonomy; examples include service robotics; personal robotics; small businesses such as in design/manufacturing/assembly/packaging/shipping of products; planetary exploration; the national air space; and defense and intelligence applications. 
+
+%- summary here
+%- what will happen if this is successful?
+
+Successful research and development in this area will lead to the following important contributions:\vspace*{-0.1 in}
+\begin{itemize}
+\item Better (seamless, natural, efficient) collaboration humans and autonomy, addressing the DSB human-autonomy goals\vspace*{-0.1 in}
+\item More effective use of humans with autonomy\vspace*{-0.1 in}
+\item Faster and more reliable verification and validation of autonomy (and humans+autonomy)\vspace*{-0.1 in}
+\item Robustly deploy human-autonomy at the mission scale (not the subsystem scale)\vspace*{-0.1 in}
+\item Human and autonomy elements, optimized in co-design for specific tasking\vspace*{-0.1 in}
+\end{itemize}
+
+%\mc{To draft quickly.} \\
 \rb{Write two key points.  Topic sentences.} \\
 \ella{Write two key points. Topic sentences.} \\
 
-- summary here
-- what will happen if this is successful?
-- some key questions we did not address, but are important:
-Our initial tack was to make inroads into acceptance.  It was hard.  Why?
-How far can modeling of human capabilities go? 
-Can we formalize trust?
-Can acceptance be accomplished without full system validation?
-How will real and perceived risk change?
+Our think piece also brought up many additional questions, both because of the challenging area we were studying, and the limited scope of the think piece. These include:\vspace*{-0.1 in}
+\begin{itemize}
+\item How can acceptance be addressed? Our initial goal was to make inroads into acceptance. However, this topic was challenging and we were not able to make strong statements in this area. Why? Are there technical approaches that can more easily address acceptance? \vspace*{-0.1 in}
+\item How far can modeling of human capabilities go? The use of models of human capabilities received mixed reaction from some, primarily because of the challenge of the task (e.g.\ accuracy) and how much has to be modeled. It is hypothesized here that even {\it some} modeling of human capabilities would be helpful in the proposed verification framework. What does some mean? What capabilities achieve the best collaborative results? How accurate do these models have to be? What if the model is incomplete? What about difficult to model situations, such as emergencies? \vspace*{-0.1 in}
+\item Can we formalize trust? Clearly, the adoption of automation is intimately tied to the ability of humans to trust that it will work for them. Can trust be modeled? Can trust be incorporated into the design/validation approach in order to speed acceptance? \vspace*{-0.1 in}
+\item How do we model the psychology of human beings? \vspace*{-0.1 in}
+\item How do we define a probabilistic specification for human+autonomy systems? Is it a worst case (operator falls asleep), or an average/variation? What if a system falls outside of the specified bounds, either in design or in operation? \vspace*{-0.1 in}\item A formal task specification is probabilistic, with a particular level of success probability. What happens when the situation is outside the bounds? How will the system degrade? Current formal V\&V methods do not address this, but could they? Would a mediation, or a correction mechanism work?\vspace*{-0.1 in}
+\item How can formal methods enable verifiable interactions between humans and automation, which may include feedback loops (verifying a command can be met) and adaptability (changing or switching tasks to provide a higher probability of success). \vspace*{-0.1 in}
+\item How can the fact that humans learn over time be leveraged? For example, a man or woman in combat for six months will do a lot better than a starting person. Also, additional information on the human can be collected, such as how they handle emergency situations. \vspace*{-0.1 in}
+\item Can acceptance be accomplished without full system validation? Currently, the state of the art in acceptance is full  testing and evaluation, with the scale of the approach proportional to the complexity of the technology. With the promise of formal methods to generate validated controllers, it is clearly a key question as to how to leverage this fundamental characteristic in an effort to reduce acceptance times, which are scaling out of control. Will modular approaches with formal methods improve acceptance? \vspace*{-0.1 in}
+\item How will real and perceived risk change? Human perception of outcomes can be different when comparing autonomy and humans. For example, compare the reaction of an accident or munition if the cause was by a human or by an autonomous system. At times, it appears that autonomy could be held to a higher standard. Are there ways that technology can be developed that influence the real/perceived risk? \vspace*{-0.1 in}
+\item What are the security risks with formal verification approaches? \vspace*{-0.1 in}
+\end{itemize}
+
+These questions are important to the overall implications and impact of the research directions, and therefore must be addressed in concert with the technological developments of the proposed research directions. 
 
