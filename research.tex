@@ -14,7 +14,7 @@ Given the motivation from the DSB and other DoD studies, and the background in t
 \item Agile: can be rapidly validated and deployed for specific exploitation missions\vspace*{-0.1 in}
 \end{itemize}
 
-Four research directions are described below that will enable these goals. 
+Research directions are described below that will enable these goals. 
 
 \subsection*{Probabilistic Models of Human Capabilities in Correct by Construction Frameworks}
 
@@ -90,8 +90,73 @@ While the proposed framework may not solve all problems, it is conceivable that 
 \subsection*{Multi-scale architectures for human autonomy}
 
 \rb{TODO}
+% - I took this out temporarily to send to Bob then put the placeholder back in.  -Ella
 
 \subsection*{Human-Automation System Co-Design}
 
-\ella{TODO}
+% \ella{TODO}
+Model-based systems engineering holds promise to improve scalability and reusability in complex 
+engineered systems but to-date has only been used to design automation and autonomy system elements.
+In traditional systems engineering processes, humans are primarily considered through interfaces 
+specified in the design, not as integral elements of the system being designed.  
+There is good reason 
+for this trend:  while a hardware and software system element can be fully customized, the human 
+cannot and should not be ``customized'' in the sense of being genetically altered or reconstructed.
+However, human capabilities are versatile and can be observed/modeled.  A human actor can then 
+be trained to effectively assume a particular role in a collaborative human-automation system, 
+and this human training can itself be optimized as part of the overall system design.
 
+We propose the study of human-automation system {\em co-design} in which the systems engineering 
+effort models and optimizes the holistic system over human-machine system trade spaces.~\footnote{This 
+process of making design choices over a complex systems trade space including humans and automation 
+is cited as one of the three primary views for making decisions in ``The Role of Autonomy in DoD 
+Systems'' (Defense Science Board, July 2012).}  For a truly integrated co-design process, 
+appropriate models, metrics, design space variables, and constraints must be defined across
+both human and autonomy elements of the system.  Designs should be free to assign each role to
+human actors, autonomous actors, or a team of both based on defined models and metrics.  
+
+A number of challenging research issues must be addressed before co-design can be effective.
+Open questions include:
+\begin{itemize}
+\item How do we model the roles and capabilities of the human?
+\item How do we allocate human and autonomy elements during the design process?
+\item How do we define common metrics for the human and autonomy elements?
+\end{itemize}
+
+The outcome of the co-design systems engineering process will be a product that requires
+human and autonomy actors to prepare and deploy effectively over a long term.  The system
+lifecycle will involve designing then executing missions, learning from results, 
+and adapting the system and actors to improve future mission effectiveness.  The implementation
+of a co-designed subsystem will look quite different depending on whether the role assigned to
+that subsystem is accomplished by a human or autonomy actor.  The basic question to be addressed for each is:
+
+\begin{itemize}
+\item {\em Human:} What training and profiling and profiling will best enable accurate 
+model development and mission readiness?
+\item {\em Autonomy:} What software and hardware development, database preparation, 
+and verification activities will optimize capabilities?
+\item {\em Both:} How will human-autonomy actors (subsystems) interact, and over what time
+scales can mission design and adaptation be performed?
+\end{itemize}
+
+Consider the person of interest and IED detection reference mission proposed above and
+shown previously in Figure~\ref{fig:ref-mission}.  This mission contains some capabilities that are
+unique to humans and autonomy actors and others that are candidates for co-design.
+Humans are uniquely able to directly interact with the local population, and humans will
+be assigned responsibility for weapon handling and discharge.  Airborne sensors will almost 
+certainly be carried by unmanned aircraft, and autonomy will be responsible for high-speed 
+data manipulation and communication.  On the other hand, data-to-decisions activities may be 
+assumed by humans, autonomy, or a collaboration of both.  Human and autonomy actors are both
+capable of collecting and disseminating data as well as mobilizing assets. 
+
+Human-autonomy interactions are required at the mission level (wide-area) and in the immediate
+area of the operation.  Wide-area collaborations will center around big data analysis 
+and interpretation, while local-area collaborations will strive to achieve shared 
+and sufficiently comprehensive situational awareness.  Local-area collaborations will also need to offer 
+effective support for soldiers particularly in life-threatening, fast-paced situations. 
+Collaboration between wide-area and local-area system elements is crucial and will involve
+direct communication (voice/text) from human actors in combination with data streams from 
+autonomy and collaborative system elements.  While the co-designed collaborative human-autonomy 
+system will be unquestionably 
+``complex'', achieving an effective co-design process holds substantial promise for improving
+future mission effectiveness.

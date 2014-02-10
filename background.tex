@@ -132,41 +132,145 @@ In summary, there are many classes of models of human tasking, behaviors, and de
 
 \subsection*{Collaborative autonomy}
 
-\mc{TODO write this section.  Then revised by Ella.}
+% \mc{TODO write this section.  Then revised by Ella.}
+%% Ella - wrote a draft; Mark - please read and revise
 
-Collaboration over computation, communication, navigation, and sensing
+Collaboration between autonomy and human actors can involve
+computation, communication, navigation, sensing, and other decision-making elements.  
+A complex mission will require interaction between a distributed collection of decision-makers
+and physically-embodied vehicles.  Decision-makers, vehicles, and soldiers may
+operate in shared or distinct environments from human collaborators.  To-date, most work
+in collaborative autonomy has focused on optimization and planning for collections of homogeneous
+vehicles (e.g., unmanned aircraft) or computational nodes (e.g., cloud computing elements).  
+Emphasis has been placed on scalability to large sets of tasks involving 
+large quantities of data to collect and process.  
 
-Multi-vehicle collaboration 
-Decentralized task selection / allocation (Market protocols - Wellman et al, Optimization - How et al) 
-Cooperative path planning (Tsourdos et al)
-Scalability through swarm-based techniques (e.g., consensus, potential field)  (McLain et al)
+There are two basic strategies for planning collaborative or multi-agent missions:  
+centralized and decentralized.  Centralized planners require 
+comprehensive knowledge of the tasks and actors to accomplish them.  A centralized planner
+can devise a globally-optimal solution but scalability is a major drawback.  Truly decentralized
+planners enable individual actors or local actor groups to coordinate their activities through
+protocols that are generally intuitive and emphasize scalability.
 
-Collaborative human-autonomy systems
-Human intent prediction (e.g. partially-observable Markov Decision Process) (Karami et al)
-Adaptive tasking (Parasuram et al)
-Use metrics (e.g., confidence) to decide when to ask for help (Fong et al) 
-Apply perspective-taking to project companion awareness state (Trafton et al)
+Substantial research has focused on organizing the motions of physically-embodied vehicles
+asked to collaboratively accomplish a particular mission.  Cooperative path planning algorithms have been 
+developed to efficiently and autonomously allocate and plan vehicle motions.~\cite{tsourdos2010cooperative,
+bellingham2003multi}.  Scalable cooperative control or ``swarming'' algorithms 
+have been devised to organize vehicle motions through information consensus~\cite{ren2007information}, 
+including cooperative timing and other coordination functions.~\cite{mclain2005coordination}
 
+For missions specified by a set of computational and communication tasks,
+decentralized task allocation and selection algorithms have been developed.  For example, market-based 
+(auction) protocols ~\cite{wellman2001auction, walsh2003decentralized}
+use agent bidding to determine an allocation and scheduling policy; research has shown such
+systems will reach equilibrium, and decentralized algorithms scale well to large collections of agents.
+Consensus-based algorithms have also been applied to distributed task allocation problems.~\cite{choi2009consensus}
 
-Capable strategies for collaborative autonomy systems exist and can be 
-leveraged for co-design of human-autonomy systems
+Humans also play a central role in collaborative systems, 
+even when these systems include state-of-the-art autonomy elements.
+Early human-robot interaction placed humans in supervisory and teleoperation roles; with this structure
+the only ``autonomy'' was realized in converting a task-level instruction into a motion sequence.  Automation
+for vehicles, e.g., aircraft flight management systems, has evolved such that onboard or remote pilots 
+supervise rather than directly controlling the vehicle.  Human-robot interaction researchers have also studied
+protocols for effectively interacting, establishing metrics that enable a robot to determine when and how to
+ask for help.~\cite{fong2003collaboration}. Recognition of natural motions or gestures 
+also shows promise as a means to reduce workload for humans sharing an environment with an autonomous robot or vehicle.
+~\cite{nehaniv2005methodological}
+
+Parasuraman~\cite{parasuraman2008humans} describes the notion of adaptive automation
+to optimize or balance workload and maintain human situational awareness.  The adaptation or switching process
+itself may be user-controlled or system-driven.  While it is generally agreed that humans are most versatile 
+in understanding complex and novel data and translating this data to decisions, automation will be capable 
+of monitoring more data with lower latency given sufficient computational resources.  Any new or more extensive
+autonomy must not only demonstrate acceptable performance but also must gain trust through use over time.
+
+For physically-proximal collaboration, researchers have begun investigating methods
+that enable a robot to interact with a human companion without requiring the human to explicitly communicate
+his/her perceptions and goals.  Example studies include prediction of human intent and perspective-taking.  
+In perspective-taking, an actor projects him/itself into the perceptual and cognitive state of a companion.  
+In doing so, the actor can better predict how to act or react so that the collaborative goal can be achieved.  
+Such behaviors are difficult to program exhaustively but early work has 
+shown promise with robotic systems learning through a series of tasks with analogue to human child 
+learning.~\cite{trafton2005enabling}
+
+Human intent prediction, accomplished to-date using uncertain modeling methods such as the 
+computationally-intensive partially-observable Markov Decison Processes,~\cite{karami2010human} 
+would enable a robot and human to work together without the requirement for the human to verbalize or gesture each task or action
+he/she intends to accomplish. Such a capability can enable more closely-coupled activities with reduced chance of 
+physical or mental conflict.  Intent prediction has also been used from the perspective of assisting data analysts,
+~\cite{santos2003user} although to-date analysts still prefer to use automation as assistive tools rather than 
+trusting it over the full data-to-decision cycle.
 
 
 \subsection*{Model-based system engineering}
 
-\ella{TODO}
+% \ella{TODO}
 
+A variety of systems and software engineering processes have been adopted by industry.  
+In software engineering, the Royce Waterfall and Boehm Spiral 
+models ~\cite{estefan2007survey} were devised to form logical processes by which
+potentially complex systems could be specified, designed, implemented, and tested over
+their product lifecycles.  Such models were found to be challenging to use in practice, 
+particularly when baseline requirements changed.  The V or ``Vee'' model for systems engineering 
+~\cite{forsberg1999system} provides an improved scheme for functional systems engineering in 
+that it accounts for an evolving baseline.  Shown in Figure ~\ref{fig:vmodel}, the baseline 
+product/system requirements evolve to a design with progressively increasing detail.  The
+development cycle creates the left leg of the V, while the testing process forms the right leg.
+The steps in development include decomposition, definition, and verification, while 
+the right leg represents validation through testing.  Correct-by-construction methods can support
+verification prior to testing (on the left leg) which can in turn improve the efficiency and completeness
+of the testing (validation) phases of the life cycle.
 
+\begin{figure}[h] 
+\centering
+   \includegraphics[width=4in]{vmodel2.jpg} 
+   \caption{The V-Model Systems Engineering Process (http://istqbexamcertification.com/wp-content/uploads/2012/01/V-model.jpg}
+   \label{fig:vmodel}
+\end{figure}
 
-Transition from functional decomposition..
-Does not scale well
-Difficult to verify
+Functional system design performed using any of the traditional systems engineering methods
+can result in a highly-complex and coupled overall design, 
+even if a hierarchical functional structure such as that 
+shown in Figure ~\ref{fig:functional-decomposition} is used to simplify the specification 
+of each component or subsystem.  Since compehensive (exhaustive) testing is not feasible, 
+it is difficult to identify cases where a specific and unusual combination of parameter values 
+causes a problem.  System developers therefore have tried to build tests that cover
+the space as well as possible.
 
+\begin{figure}[h] 
+\centering
+   \includegraphics[width=4in]{functional-decomposition.jpg} 
+   \caption{Functional Decomposition}
+   \label{fig:functional-decomposition}
+\end{figure}
 
-…to Model-based System Engineering 
-State-based models of each actor are generated.
-Each model is re-used over all phases of system engineering
-Improves scalability and consistency
-State analysis offers a formal method to verify behaviors
-Successfully applied to single-actor systems (e.g., spacecraft missions)
+Model-based systems engineering ~\cite{balmelli2006model, estefan2007survey}
+provides a more object-oriented methodology.
+Shown in Figure ~\ref{fig:model-based-system-eng}, all lifecycle processes are
+devised around a suite of subsystem or component models.  Substantial emphasis
+is placed on generating correct state-based models for each ``actor'' in the
+system, then these models are re-used throughout all phases of system engineering.
+The modularity and reusability afforded by the model-based systems engineering process
+improves scalability and consistency over functional design schemes.  Tools for state analysis 
+offer a formal method to verify behaviors to augment designer scrutiny of 
+tabulated requirements their satisfaction in product design.
+Model-based engineering has been successfully applied to a number of domains,
+including automotive ~\cite{pretschner2007software, bringmann2008model} and 
+spacecraft mission design ~\cite{dvorak2000software}.
+
+\begin{figure}[h] 
+\centering
+   \includegraphics[width=6.5in]{model-based-system-eng.jpg} 
+   \caption{Model-based System Engineering~\cite{dvorak2000software}}
+   \label{fig:model-based-system-eng}
+\end{figure}
+
+Most products designed with the above systems engineering principles have resided on
+a single physically-embodied vehicle or system plus any network-based support, 
+e.g., spacecraft mission control, a ground control station for an unmanned aircraft system (UAS), 
+connection to the ``cloud'' for database or computational resource access.  Researchers have begun working toward
+application of model-based systems engineering to multi-agent domains ~\cite{gascuena2012model}.
+The term ``multi-agent'' can be used to represent agent-based models applied to a system 
+with a single or multiple physical embodiments.  The scalability and re-use offered by 
+model-based systems engineering is also captured by agent-based modeling paradigms.
 
